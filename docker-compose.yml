@@ -1,0 +1,25 @@
+services: 
+  backend:
+    build:
+      context: ./02-tic-tac-toe
+    container_name: juego-tic-tac-toe
+    expose:
+      - "5173"
+    networks:
+      - app-network
+
+  apache:
+    build:
+      context: ./apache-proxy-inverso
+    container_name: proxy-inverso
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+    
