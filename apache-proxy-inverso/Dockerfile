@@ -1,3 +1,4 @@
+# Imagen de apache
 FROM httpd:latest
 
 # Copiamos nuestro VirtualHost personalizado

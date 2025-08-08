@@ -49,7 +49,9 @@ function App() {
   };
   return (
     <main className="board">
-      <h1>Tic Tac Toe</h1>
+      <h1>Sistemas operativos</h1>
+      <h2>Cedeño Quiroz Jeremy José</h2>
+      <h2>Tic Tac Toe</h2>
       <button onClick={resetGame}>Reiniciar Juego</button>
       <section className="game">
         {board.map((square, index) => {
